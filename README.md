@@ -16,6 +16,7 @@ cp .env.example .env
 - Generate App key
 ```bash
 php artisan key
+```
 
 - Migrate and seed the database
 ```bash
