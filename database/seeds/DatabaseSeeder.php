@@ -11,10 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(RegionSeeder::class);
-        $this->call(PlanetSeeder::class);
-        $this->call(WeaponSeeder::class);
-        $this->call(PageSeeder::class);
         $this->call(UserSeeder::class);
     }
 }

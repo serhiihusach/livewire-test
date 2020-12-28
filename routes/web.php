@@ -4,7 +4,9 @@ use App\User;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home')->name('home');
+Route::get('/', ['middleware' => 'guest', function () {
+    return view('auth.login');
+}])->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::view('login', 'auth.login')->name('login');
